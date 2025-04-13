@@ -1,0 +1,39 @@
+{
+  "name": "chatinch",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "dev": "ts-node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "keywords": [],
+  "author": "Shift",
+  "license": "ISC",
+  "description": "Simple chat App",
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@types/express": "^5.0.1",
+    "@types/mysql": "^2.15.27",
+    "@types/node": "^22.14.1",
+    "eslint": "^9.24.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-prettier": "^5.2.6",
+    "globals": "^16.0.0",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.29.1"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.6.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.13.2",
+    "socket.io": "^4.8.1"
+  }
+}
