@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:6
+    container_name: chatinch-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: chatinch
+
+  backend:
+    build: .
+    ports:
+      - "5001:5001"
+    depends_on:
+      - mongodb
+    env_file:  # Chargement des variables depuis un fichier
+      - ./backend/.env
+    environment:  # Variables supplémentaires
+      - NODE_ENV=development
+      - MONGO_URI=mongodb://root:example@mongodb:27017/chatinch?authSource=admin
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+volumes:
+  mongodb_data:
