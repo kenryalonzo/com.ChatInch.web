@@ -1,14 +1,15 @@
 {
   "name": "chatinch",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "/backend/src/server.ts",
   "scripts": {
-    "dev": "ts-node src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js"
+    "dev": "nodemon -e ts --exec \"ts-node backend/src/server.ts\"",
+    "build": "tsc -p tsconfig.json",
+    "start": "node ./backend/dist/server.js"
   },
   "keywords": [],
   "author": "Shift",
+  "type": "commonjs",
   "license": "ISC",
   "description": "Simple chat App",
   "devDependencies": {
