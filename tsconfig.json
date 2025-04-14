@@ -10,6 +10,7 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "types": ["node", "express", "jsonwebtoken"],
+    "typeRoots": ["./node_modules/@types", "./src/types"],
     "paths": {
       "@/*": ["./backend/src/*"]
     }
