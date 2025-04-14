@@ -1,12 +1,12 @@
 # Étape de build
-FROM node:18 AS builder
+FROM node:22 AS builder
 WORKDIR /app
 
-# 1. Copie des dépendances
+# 1. Copie des fichiers de dépendances
 COPY package*.json ./
 
-# 2. Installation (prod seulement pour réduire la taille)
-RUN npm install --production
+# 2. Installation COMPLÈTE (inclut TypeScript)
+RUN npm install
 
 # 3. Copie du code source
 COPY . .
@@ -14,11 +14,11 @@ COPY . .
 # 4. Build TypeScript
 RUN npm run build
 
-# Étape finale
-FROM node:18-alpine
+# Étape finale (image légère)
+FROM node:22-alpine
 WORKDIR /app
 
-# 5. Copie uniquement le nécessaire
+# 5. Copie uniquement le nécessaire pour la production
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/backend/dist ./dist
 COPY --from=builder /app/package.json ./
