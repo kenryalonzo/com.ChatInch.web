@@ -9,6 +9,7 @@
     "skipLibCheck": true,
     "moduleResolution": "node",
     "baseUrl": ".",
+    "types": ["node", "express", "jsonwebtoken"],
     "paths": {
       "@/*": ["./backend/src/*"]
     }
