@@ -15,6 +15,10 @@
       "@/*": ["./backend/src/*"]
     }
   },
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true
+  },
   "include": ["./backend/src/**/*.ts"],
   "exclude": ["node_modules"]
 }
