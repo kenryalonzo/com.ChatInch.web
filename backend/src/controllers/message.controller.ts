@@ -1,9 +1,9 @@
 import { Response } from 'express';
-import User from "@/models/user.model";
-import Message from "@/models/message.model";
-import cloudinary from "@/lib/cloudinary";
-import { getReceiverSocketId, io } from "@/lib/socket";
-import { AuthRequest } from "@/types/express";
+import User from "../models/user.model";
+import Message from "../models/message.model";
+import cloudinary from "../lib/cloudinary";
+import { getReceiverSocketId, io } from "../lib/socket";
+import { AuthRequest } from "../types/express";
 
 export const getUsersForSidebar = async (req: AuthRequest, res: Response): Promise<void> => {
   try {
