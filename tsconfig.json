@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
+    "target": "ES2020",
     "module": "commonjs",
     "outDir": "backend/dist",
     "rootDir": "./backend/src",
@@ -8,17 +8,17 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
-    "baseUrl": ".",
+    "baseUrl": "./backend/src",
     "types": ["node", "express", "jsonwebtoken"],
     "typeRoots": ["./node_modules/@types", "./src/types"],
     "paths": {
-      "@/*": ["./backend/src/*"]
-    }
+      "@/*": ["./*"],
+    },
   },
   "ts-node": {
     "transpileOnly": true,
     "files": true
   },
-  "include": ["./backend/src/**/*.ts"],
+  "include": ["./backend/src/**/*"],
   "exclude": ["node_modules"]
 }

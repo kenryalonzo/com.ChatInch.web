@@ -1,11 +1,11 @@
-import User from '@/models/user.model';
+import User from '../models/user.model';
 import {  Response } from 'express';
 
 import bcrypt from 'bcryptjs';
-import { generateToken } from '@/lib/utils';
-import clouadinary from '@/lib/cloudinary';
+import { generateToken } from '../lib/utils';
+import clouadinary from '../lib/cloudinary';
 
-import { AuthRequest } from '@/types/express';
+import { AuthRequest } from '../types/express';
 
 export const signup = async (req: AuthRequest, res: Response): Promise<void> => {
     const { fullName, email, password } = req.body;
