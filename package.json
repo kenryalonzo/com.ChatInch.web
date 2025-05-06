@@ -12,7 +12,7 @@
   },
   "keywords": [],
   "author": "Shift",
-  "type": "commonjs",
+  "type": "module",
   "license": "ISC",
   "description": "Simple chat App",
   "devDependencies": {
