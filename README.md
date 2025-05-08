@@ -2,7 +2,7 @@
 
 ChatInch est une application web de messagerie instantanée, développée dans le cadre d’une formation en développement web. Elle propose une interface intuitive, la prise en charge de messages texte et image en temps réel, ainsi qu'une authentification sécurisée.
 
-![Demo Screenshot](https://frontend/public/present.png)
+![Demo App](/frontend/public/present.png)
 
 ---
 
